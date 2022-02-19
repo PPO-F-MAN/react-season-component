@@ -1,12 +1,16 @@
-import React, { FC, useState } from "react"
+import React, { FC, ReactNode, useState } from "react"
 import { useEffect } from "react"
 import { Container } from "./styled"
+import Rainy from "./Rainy"
+import Snowy from "./Snowy"
+
 import type { Weather as WeatherProps } from "../types"
 
-const cloudyBg = "/asset/weather/cloudy/Cloudy.svg"
-const sunnyBg = "/asset/weather/sunny/Sunny.svg"
-const rainyBg = "/asset/weather/rainy/Rainy.svg"
-const snowyBg = "/asset/weather/snowy/Snowy.svg"
+const cloudyGradient =
+  "linear-gradient(179.08deg, #ADFEFF 0.79%, #FCE5F7 101.36%)"
+const sunnyGraient = "linear-gradient(180deg, #5DC4FF 0%, #DCFAF8 97.64%)"
+const rainyGradient = "linear-gradient(180deg, #0C176D 0%, #88C4D6 100%)"
+const snowyGraident = "linear-gradient(180deg, #476F87 0%, #96BBD8 100%)"
 
 type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy"
 
@@ -35,6 +39,7 @@ const getAutoType = (typeArray: typeof types) => {
 const Weather: FC<WeatherProps> = ({
   type = "auto",
   typeChangeTerm = 10000,
+  children,
 }) => {
   const [refinedType, setRefinedType] = useState(type)
 
@@ -55,21 +60,29 @@ const Weather: FC<WeatherProps> = ({
   const getBackgroundSrc = () => {
     switch (refinedType) {
       case "cloudy":
-        return cloudyBg
+        return cloudyGradient
       case "rainy":
-        return rainyBg
+        return rainyGradient
       case "snowy":
-        return snowyBg
+        return snowyGraident
       default:
-        return sunnyBg
+        return sunnyGraient
     }
   }
   const src = getBackgroundSrc()
 
-  return (
-    //getBackgroundSrc()
-    <Container backgroundSrc={sunnyBg}>{refinedType}</Container>
-  )
+  const getCanvas = (children: ReactNode) => {
+    switch (refinedType) {
+      case "rainy":
+        return <Rainy>{children}</Rainy>
+      case "snowy":
+        return <Snowy>{children}</Snowy>
+      default:
+        ;<>{children}</>
+    }
+  }
+
+  return <Container gradient={src}>{getCanvas(children)}</Container>
 }
 
 export default Weather

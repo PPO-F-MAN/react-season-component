@@ -2,7 +2,10 @@ import React, { FC, useState } from "react"
 import { useEffect } from "react"
 import { Container } from "./styled"
 import type { CommonComponentProps } from "../types"
-// auto | spring | summer | autumn | winter | sunny | cloud | cloudy | rainy |
+const cloudyBg = "/asset/weather/cloudy/Cloudy.svg"
+const sunnyBg = "/asset/weather/sunny/Sunny.svg"
+const rainyBg = "/asset/weather/rainy/Rainy.svg"
+const snowyBg = "/asset/weather/snowy/Snowy.svg"
 
 type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy"
 
@@ -50,7 +53,24 @@ const Weather: FC<WeatherProps> = ({ type = "auto", animationDuration }) => {
     }
   }, [])
 
-  return <Container>{refinedType}</Container>
+  const getBackgroundSrc = () => {
+    switch (refinedType) {
+      case "cloudy":
+        return cloudyBg
+      case "rainy":
+        return rainyBg
+      case "snowy":
+        return snowyBg
+      default:
+        return sunnyBg
+    }
+  }
+  const src = getBackgroundSrc()
+
+  return (
+    //getBackgroundSrc()
+    <Container backgroundSrc={sunnyBg}>{refinedType}</Container>
+  )
 }
 
 export default Weather

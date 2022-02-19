@@ -4,8 +4,9 @@ import { Weather as WeatherProps } from "../types/common";
 
 const Weather: React.FC<WeatherProps> = ({
   children,
-  type,
-  typeChangeTerm,
+  type = "auto",
+  animationRoundTime,
+  typeChangeTerm = 10000,
   imagePosition,
   animation,
 }) => {

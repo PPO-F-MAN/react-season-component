@@ -1,26 +1,29 @@
 interface CommonProps {
-  typeChangeTerm: TypeChangeTerm;
+  typeChangeTerm?: TypeChangeTerm;
+  animationRoundTime: AnimationRoundTime;
   imagePosition: ImagePosition;
   animation: Animation;
 }
 
 export interface Season extends CommonProps {
-  type: SeasonType;
+  type?: SeasonType;
 }
 
 export interface Time extends CommonProps {
-  type: TimeType;
+  type?: TimeType;
 }
 
 export interface Weather extends CommonProps {
-  type: WeatherType;
+  type?: WeatherType;
 }
 
-type SeasonType = "spring" | "summer" | "autumn" | "winter";
-type TimeType = "morning" | "day" | "evening" | "night";
-type WeatherType = "sunny" | "cloudy" | "rainy" | "snowy";
+type SeasonType = "auto" | "spring" | "summer" | "autumn" | "winter";
+type TimeType = "auto" | "morning" | "day" | "evening" | "night";
+type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy";
 
 type TypeChangeTerm = number;
+
+type AnimationRoundTime = number;
 
 type ImagePosition =
   | "left-top"

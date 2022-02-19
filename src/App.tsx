@@ -16,5 +16,4 @@ export default App;
 
 // 사용자 중심에서 생각하기
 
-const Container = styled.nav`
-`;
+const Container = styled.nav``;

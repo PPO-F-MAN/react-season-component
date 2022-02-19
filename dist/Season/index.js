@@ -24,7 +24,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var Styled = __importStar(require("./styled"));
-function Season() {
-    return react_1.default.createElement(Styled.Container, null, "Season");
-}
+var Season = function (_a) {
+    var children = _a.children, animation = _a.animation;
+    return (react_1.default.createElement(Styled.Container, null,
+        animation,
+        children));
+};
 exports.default = Season;

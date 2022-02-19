@@ -1,8 +1,17 @@
 import React from "react";
 import * as Styled from "./styled";
 
-function Season() {
-  return <Styled.Container>Season</Styled.Container>;
+interface SeasonProps {
+  animation: string;
 }
+
+const Season: React.FC<SeasonProps> = ({ children, animation }) => {
+  return (
+    <Styled.Container>
+      {animation}
+      {children}
+    </Styled.Container>
+  );
+};
 
 export default Season;

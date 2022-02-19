@@ -1,10 +1,10 @@
 import React from "react"
-import { Season, Time, Weather } from "./lib"
+import { Exam } from "./Exam"
 
 function App() {
   return (
     <div>
-      <Time type="day" typeChangeTerm={5} anim />
+      <Exam />
     </div>
   )
 }

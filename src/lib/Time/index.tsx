@@ -10,7 +10,18 @@ const Time: React.FC<TimeProps> = ({
   imagePosition,
   animation,
 }) => {
-  return <Styled.Container>{children}</Styled.Container>
+  const [x, y] = imagePosition.split("-")
+  return (
+    <Styled.Container
+      x={x}
+      y={y}
+      animation={animation}
+      duration={animationRoundTime}
+      iteration={typeChangeTerm}
+    >
+      {children}
+    </Styled.Container>
+  )
 }
 
 export default Time

@@ -22,7 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/dist
+dist
+/src/App.tsx
+/src/index.tsx
 demo
 .babelrc
 webpack.config.js

@@ -2,10 +2,9 @@
   "name": "react-season-component",
   "version": "0.2.1",
   "private": false,
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Awesome-Sprinters/react-season-component"
@@ -19,16 +18,21 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rimraf dist",
-    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files",
-    "prepublish": "npm run compile"
+    "publish:npm": "rm -rf dist && mkdir dist && tsc",
+    "prepare": "npm run publish:npm"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {

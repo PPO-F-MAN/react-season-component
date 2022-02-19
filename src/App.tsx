@@ -1,41 +1,25 @@
 import React from "react"
+import { Season } from "./lib"
 import styled from "styled-components"
-import { Time } from "./lib"
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-`
-
-const Card = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 500px;
-  font-size: 10px;
-`
 
 function App() {
   return (
     <Container>
-      <Card>
-        <Time
-          type="auto"
-          typeChangeTerm={100}
-          animationRoundTime={6}
-          animation="top-to-bottom"
-          imagePosition="right-top"
-          background={true}
-        >
-          <Card>하하하</Card>
-        </Time>
-      </Card>
+      <Season type="winter">
+        <Button>test</Button>
+      </Season>
     </Container>
   )
 }
 
 export default App
+
+// 사용자 중심에서 생각하기
+
+const Container = styled.div`
+  width: 100px;
+`
+
+const Button = styled.button`
+  width: 300px;
+`

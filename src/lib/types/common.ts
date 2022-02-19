@@ -13,7 +13,7 @@ export interface Time extends CommonProps {
   type?: TimeType;
 }
 
-export interface Weather extends Omit<CommonProps, "imagePosition"> {
+export interface Weather extends Pick<CommonProps, "typeChangeTerm"> {
   type?: WeatherType;
 }
 

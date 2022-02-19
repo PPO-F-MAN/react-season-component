@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { FC, ReactNode, useState } from "react"
 import { useEffect } from "react"
 import { Container } from "./styled"
 import Rainy from "./Rainy"
 import Snowy from "./Snowy"
+=======
+import React, { FC, ReactNode, useState, useRef } from "react";
+import { useEffect } from "react";
+import { Container } from "./styled";
+import Rainy from "./Rainy";
+import Snowy from "./Snowy";
+>>>>>>> 0f0d6ea (fix: 비 내릴 때  바닥 새는거 수정)
 
 import type { Weather as WeatherProps } from "../types"
 import Cloudy from "./Cloudy"
@@ -42,7 +50,13 @@ const Weather: FC<WeatherProps> = ({
   typeChangeTerm = 10000,
   children,
 }) => {
+<<<<<<< HEAD
   const [refinedType, setRefinedType] = useState(type)
+=======
+  const [refinedType, setRefinedType] = useState(type);
+  const [_, setMount] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+>>>>>>> 0f0d6ea (fix: 비 내릴 때  바닥 새는거 수정)
 
   useEffect(() => {
     let setIntervalReference: NodeJS.Timer
@@ -75,7 +89,17 @@ const Weather: FC<WeatherProps> = ({
   const getCanvas = (children: ReactNode) => {
     switch (refinedType) {
       case "rainy":
-        return <Rainy>{children}</Rainy>
+        return (
+          <Rainy
+            parentHeight={
+              containerRef.current
+                ? `${containerRef.current?.clientHeight}px`
+                : "100vh"
+            }
+          >
+            {children}
+          </Rainy>
+        );
       case "snowy":
         return <Snowy>{children}</Snowy>
       case "cloudy":
@@ -85,7 +109,16 @@ const Weather: FC<WeatherProps> = ({
     }
   }
 
-  return <Container gradient={src}>{getCanvas(children)}</Container>
-}
+  // this setMount is used to pass new clientHeight to Rainy
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
+  return (
+    <Container ref={containerRef} gradient={src}>
+      {getCanvas(children)}
+    </Container>
+  );
+};
 
 export default Weather

@@ -12,14 +12,14 @@ export const Container = styled.div<{
   z-index: 0;
 `;
 
-const drop = keyframes`
+const drop = (height: string) => keyframes`
   90% {
     opacity: 1;
   }
 
   100% {
     opacity: 0;
-    transform: translateY(100vh);
+    transform: translateY(${height});
   }
 `;
 
@@ -30,6 +30,7 @@ export const Rain = styled.svg<{
   duration: number;
   pathOpacity: number;
   transformRandom: number;
+  parentHeight: string;
 }>`
   position: absolute;
   top: calc(${({ top }) => top} * -1px);
@@ -37,7 +38,7 @@ export const Rain = styled.svg<{
   height: 30px;
   animation-delay: calc(${({ delay }) => delay} * 1s);
   animation-duration: calc(${({ duration }) => duration} * 1s);
-  animation-name: ${drop};
+  animation-name: ${({ parentHeight }) => drop(parentHeight)};
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 

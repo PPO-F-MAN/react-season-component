@@ -3,7 +3,11 @@ import { Rain } from "./styled";
 // delay
 // duration
 // pathOpacity transformRandom
-const Rainy: FC = ({ children }) => {
+interface RainyProps {
+  parentHeight: string;
+}
+
+const Rainy: FC<RainyProps> = ({ children, parentHeight }) => {
   return (
     <>
       {Array.from({ length: 250 }).map((_, index) => {
@@ -18,6 +22,7 @@ const Rainy: FC = ({ children }) => {
             duration={Math.random() * 3}
             pathOpacity={Math.random()}
             transformRandom={Math.random()}
+            parentHeight={parentHeight}
           >
             <path
               stroke="none"

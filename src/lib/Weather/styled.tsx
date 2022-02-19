@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const Container = styled.div<{
   gradient: string;
@@ -97,4 +97,53 @@ export const Cloud = styled.div<{
     margin-right: 3.958333333%;
   }
   aspect-ratio: 1749 / 250;
+`;
+
+export const Sunshine = styled.canvas`
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -11;
+  animation: spin 300s linear infinite;
+  transform-origin: 50% 50%;
+`;
+
+const colorizerCommon = `
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  filter: blur(130px);`;
+
+export const Colorizer1 = styled.div`
+  ${colorizerCommon}
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff, #fff);
+`;
+
+export const Colorizer2 = styled.div`
+  ${colorizerCommon}
+  top: 20%;
+  left: 70%;
+  background: #fff;
+`;
+
+export const Colorizer3 = styled.div`
+  ${colorizerCommon}
+  top: 80%;
+  left: -15%;
+  background: #fff;
+  filter: blur(80px);
+  border-radius: 50%;
+`;
+
+export const Colorizer4 = styled.div`
+  ${colorizerCommon}
+  top: 20%;
+  left: 35%;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  filter: blur(80px);
+  border-radius: 50%;
 `;

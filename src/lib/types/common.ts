@@ -14,7 +14,7 @@ export interface Time extends CommonProps {
   background: boolean;
 }
 
-export interface Weather extends CommonProps {
+export interface Weather extends Omit<CommonProps, "imagePosition"> {
   type?: WeatherType;
 }
 

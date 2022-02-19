@@ -1,7 +1,8 @@
 import React, { FC, useState } from "react"
 import { useEffect } from "react"
 import { Container } from "./styled"
-import type { CommonComponentProps } from "../types"
+import type { Weather as WeatherProps } from "../types"
+
 const cloudyBg = "/asset/weather/cloudy/Cloudy.svg"
 const sunnyBg = "/asset/weather/sunny/Sunny.svg"
 const rainyBg = "/asset/weather/rainy/Rainy.svg"
@@ -9,12 +10,7 @@ const snowyBg = "/asset/weather/snowy/Snowy.svg"
 
 type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy"
 
-interface WeatherProps extends CommonComponentProps {
-  type?: WeatherType
-}
-
 const types: WeatherType[] = ["snowy", "sunny", "cloudy", "rainy"]
-
 const map = new Map<WeatherType, boolean>()
 
 /**
@@ -36,7 +32,10 @@ const getAutoType = (typeArray: typeof types) => {
   return typeArray[index]
 }
 
-const Weather: FC<WeatherProps> = ({ type = "auto", animationDuration }) => {
+const Weather: FC<WeatherProps> = ({
+  type = "auto",
+  typeChangeTerm = 10000,
+}) => {
   const [refinedType, setRefinedType] = useState(type)
 
   useEffect(() => {
@@ -45,7 +44,7 @@ const Weather: FC<WeatherProps> = ({ type = "auto", animationDuration }) => {
     if (type === "auto") {
       setIntervalReference = setInterval(() => {
         setRefinedType(getAutoType(types))
-      }, animationDuration)
+      }, typeChangeTerm)
     }
 
     return () => {

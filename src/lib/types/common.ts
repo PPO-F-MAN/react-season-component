@@ -1,7 +1,7 @@
 interface CommonProps {
-  typeChangeTerm: TypeChangeTerm;
-  imagePosition: ImagePosition;
-  animation: Animation;
+  typeChangeTerm?: TypeChangeTerm;
+  imagePosition?: ImagePosition;
+  animation?: Animation;
 }
 
 export interface Season extends CommonProps {

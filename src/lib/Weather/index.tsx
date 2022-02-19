@@ -5,6 +5,7 @@ import Rainy from "./Rainy";
 import Snowy from "./Snowy";
 
 import type { Weather as WeatherProps } from "../types";
+import Cloudy from "./Cloudy";
 
 const cloudyGradient =
   "linear-gradient(179.08deg, #ADFEFF 0.79%, #FCE5F7 101.36%)";
@@ -77,6 +78,8 @@ const Weather: FC<WeatherProps> = ({
         return <Rainy>{children}</Rainy>;
       case "snowy":
         return <Snowy>{children}</Snowy>;
+      case "cloudy":
+        return <Cloudy>{children}</Cloudy>;
       default:
         <>{children}</>;
     }

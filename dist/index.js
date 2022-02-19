@@ -3,10 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importDefault(require("react"));
-var react_dom_1 = __importDefault(require("react-dom"));
-var App_1 = __importDefault(require("./App"));
-var GlobalStyle_1 = __importDefault(require("./GlobalStyle"));
-react_dom_1.default.render(react_1.default.createElement(react_1.default.StrictMode, null,
-    react_1.default.createElement(GlobalStyle_1.default, null),
-    react_1.default.createElement(App_1.default, null)), document.getElementById('root'));
+exports.TestComponent2 = exports.TestComponent = void 0;
+var TestComponent_1 = require("./TestComponent");
+Object.defineProperty(exports, "TestComponent", { enumerable: true, get: function () { return __importDefault(TestComponent_1).default; } });
+var TestComponent2_1 = require("./TestComponent2");
+Object.defineProperty(exports, "TestComponent2", { enumerable: true, get: function () { return __importDefault(TestComponent2_1).default; } });

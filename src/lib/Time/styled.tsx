@@ -96,10 +96,14 @@ export const Container = styled.div<ContainerProps>`
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 10;
 `;
 
 export const Image = styled.img`
   ${imgPositionStyle};
+  z-index: -100;
 `;
 
-export const Children = styled.div``;
+export const Children = styled.div`
+  z-index: 100;
+`;

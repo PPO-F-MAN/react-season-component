@@ -26,11 +26,20 @@ const Time: React.FC<TimeProps> = ({
     useState<string>(MORNING_GRADIENT);
 
   const [x, y] = imagePosition.split("-");
-
+  const date = new Date().getHours();
   useEffect(() => {
+    console.log(date);
     if (type === "auto") {
-      if ("현재 시간이 - 면") {
+      if (date <= 6) {
+        setCurrentType("night");
+      } else if (date <= 12) {
+        setCurrentType("morning");
+      } else if (date <= 18) {
         setCurrentType("day");
+      } else if (date < 20) {
+        setCurrentType("evening");
+      } else {
+        setCurrentType("night");
       }
     }
   }, [type]);

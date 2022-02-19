@@ -16,7 +16,7 @@ const Card = styled.div`
   align-items: center;
   width: 600px;
   height: 400px;
-  background-color: aliceblue;
+  font-size: 150px;
 `;
 
 function App() {
@@ -27,11 +27,11 @@ function App() {
           type="day"
           typeChangeTerm={5000}
           animationRoundTime={6}
-          animation="left-to-right"
-          imagePosition="left-top"
+          animation="right-to-left"
+          imagePosition="right-top"
           background={true}
         >
-          넹넹넹
+          <Card>넹넹넹</Card>
         </Time>
       </Card>
     </Container>

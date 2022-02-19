@@ -1,6 +1,6 @@
-import React from "react";
-import * as Styled from "./styled";
-import { Weather as WeatherProps } from "../types/common";
+import React from "react"
+import * as Styled from "./styled"
+import { Weather as WeatherProps } from "../types/common"
 
 const Weather: React.FC<WeatherProps> = ({
   children,
@@ -10,7 +10,7 @@ const Weather: React.FC<WeatherProps> = ({
   imagePosition,
   animation,
 }) => {
-  return <Styled.Container>{children}</Styled.Container>;
-};
+  return <Styled.Container>{children}</Styled.Container>
+}
 
-export default Weather;
+export default Weather

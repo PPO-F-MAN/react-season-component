@@ -1,6 +1,6 @@
-import React from "react";
-import * as Styled from "./styled";
-import { Season as SeasonProps } from "../types/common";
+import React from "react"
+import * as Styled from "./styled"
+import { Season as SeasonProps } from "../types/common"
 
 const Season: React.FC<SeasonProps> = ({
   children,
@@ -9,7 +9,7 @@ const Season: React.FC<SeasonProps> = ({
   imagePosition,
   animation,
 }) => {
-  return <Styled.Container>{children}</Styled.Container>;
-};
+  return <Styled.Container>{children}</Styled.Container>
+}
 
-export default Season;
+export default Season

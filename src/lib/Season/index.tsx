@@ -9,15 +9,7 @@ const Season: React.FC<SeasonProps> = ({
   imagePosition,
   animation,
 }) => {
-  return (
-    <Styled.Container type={type}>
-      <div className="ocean">
-        <div className="wave"></div>
-        <div className="wave"></div>
-        <div>{children}</div>
-      </div>
-    </Styled.Container>
-  )
+  return <Styled.Container type={type}>{children}</Styled.Container>
 }
 
 export default Season

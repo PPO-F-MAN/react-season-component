@@ -1,8 +1,8 @@
 interface CommonProps {
   typeChangeTerm?: TypeChangeTerm;
   animationRoundTime?: AnimationRoundTime;
-  imagePosition: ImagePosition;
-  animation: Animation;
+  imagePosition?: ImagePosition;
+  animation?: Animation;
 }
 
 export interface Season extends CommonProps {

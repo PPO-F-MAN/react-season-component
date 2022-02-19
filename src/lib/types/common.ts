@@ -1,6 +1,6 @@
 interface CommonProps {
   typeChangeTerm?: TypeChangeTerm;
-  animationRoundTime: AnimationRoundTime;
+  animationRoundTime?: AnimationRoundTime;
   imagePosition: ImagePosition;
   animation: Animation;
 }

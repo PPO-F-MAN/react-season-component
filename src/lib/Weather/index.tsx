@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Container } from "./styled";
 import Rainy from "./Rainy";
 import Snowy from "./Snowy";
+import Sunny from "./Sunny";
 
 import type { Weather as WeatherProps } from "../types";
 import Cloudy from "./Cloudy";
@@ -92,6 +93,8 @@ const Weather: FC<WeatherProps> = ({
         return <Snowy>{children}</Snowy>;
       case "cloudy":
         return <Cloudy>{children}</Cloudy>;
+      case "sunny":
+        return <Sunny>{children}</Sunny>;
       default:
         <>{children}</>;
     }

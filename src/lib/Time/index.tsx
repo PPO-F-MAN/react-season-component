@@ -5,7 +5,7 @@ import { Time as TimeProps } from "../types/common";
 const Time: React.FC<TimeProps> = ({
   children,
   type = "auto",
-  animationRoundTime,
+  animationRoundTime = 10000,
   typeChangeTerm = 10000,
   imagePosition,
   animation,

@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "module": "commonjs",
     "target": "es5",
-    "lib": ["es6", "dom", "es2016", "es2017"],
-    "jsx": "react",
-    "sourceMap": false,
-    "declaration": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "typeRoots": ["index.d.ts", "node_modules/@types"]
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "jsx": "react-jsx"
   },
-  "include": ["./src/**/*.tsx", "./src/**/*.ts"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

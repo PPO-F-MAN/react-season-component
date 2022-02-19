@@ -1,12 +1,12 @@
 import React from 'react';
-import { Season, Time, Weather } from './lib';
+import { Season, Time, Weather } from './components';
 
 function App() {
   return (
-    <div className="App">
-      <Season>Season</Season>
-      <Time>Time</Time>
-      <Weather>Weather</Weather>
+    <div>
+      <Season />
+      <Time />
+      <Weather />
     </div>
   );
 }

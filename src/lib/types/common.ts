@@ -11,6 +11,7 @@ export interface Season extends CommonProps {
 
 export interface Time extends CommonProps {
   type?: TimeType;
+  background: boolean;
 }
 
 export interface Weather extends CommonProps {

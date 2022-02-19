@@ -3,11 +3,11 @@ import { useEffect } from "react"
 import { Container } from "./styled"
 import Rainy from "./Rainy"
 import Snowy from "./Snowy"
-
 import Sunny from "./Sunny"
-
-import type { Weather as WeatherProps } from "../types"
 import Cloudy from "./Cloudy"
+import { getAutoType } from "../utils"
+
+import type { Weather as WeatherProps, WeatherType } from "../types"
 
 const cloudyGradient =
   "linear-gradient(179.08deg, #ADFEFF 0.79%, #FCE5F7 101.36%)"
@@ -15,29 +15,8 @@ const sunnyGraient = "linear-gradient(180deg, #5DC4FF 0%, #DCFAF8 97.64%)"
 const rainyGradient = "linear-gradient(180deg, #0C176D 0%, #88C4D6 100%)"
 const snowyGraident = "linear-gradient(180deg, #476F87 0%, #96BBD8 100%)"
 
-type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy"
-
 const types: WeatherType[] = ["snowy", "sunny", "cloudy", "rainy"]
 const map = new Map<WeatherType, boolean>()
-
-/**
- *
- * @desc type auto일 때, 일정 시간 지난 이후에 보여줄 타입 결정
- */
-const getAutoType = (typeArray: typeof types) => {
-  if (map.size === types.length) {
-    map.clear()
-  }
-
-  let index = ~~(Math.random() * 4)
-
-  while (map.has(typeArray[index])) {
-    index = ~~(Math.random() * 4)
-  }
-
-  map.set(typeArray[index], true)
-  return typeArray[index]
-}
 
 const Weather: FC<WeatherProps> = ({
   type = "auto",
@@ -53,7 +32,7 @@ const Weather: FC<WeatherProps> = ({
 
     if (type === "auto") {
       setIntervalReference = setInterval(() => {
-        setRefinedType(getAutoType(types))
+        setRefinedType(getAutoType(map, types))
       }, typeChangeTerm)
     }
 

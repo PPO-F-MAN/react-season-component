@@ -26,4 +26,5 @@ dist
 demo
 .babelrc
 webpack.config.js
- 
+
+App.tsx

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import typeHandler from "./utils/typeHander"
-import { ASSET_AUTUMN, ASSET_WINTER } from "./constants"
+import { ASSET_SPRING, ASSET_AUTUMN, ASSET_WINTER } from "./constants"
 
 export const SeasonContainer = styled.div<{ type: string }>`
   background: ${({ type }) => typeHandler(type)};
@@ -14,16 +14,12 @@ export const SeasonContainer = styled.div<{ type: string }>`
 
 const handleSeasonItem = (type: string) => {
   switch (type) {
-    // case "spring":
-    //   return SPRING;
-    // case "summer":
-    //   return SUMMER;
+    case "spring":
+      return ASSET_SPRING
     case "autumn":
-      return ASSET_AUTUMN.item1
-    case "winter":
-      return ASSET_WINTER.item1
+      return ASSET_AUTUMN
     default:
-      return ASSET_WINTER.item1
+      return ASSET_WINTER
   }
 }
 
@@ -57,7 +53,7 @@ export const EffectContainer = styled.div<{ type: string }>`
     position: absolute;
     width: 10px;
     height: 10px;
-    background: url(handleSeasonItem(type));
+    background: url(${({ type }) => handleSeasonItem(type).item1});
     background-size: 100% 100%;
   }
   & .starMedium {
@@ -74,7 +70,7 @@ export const EffectContainer = styled.div<{ type: string }>`
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url(handleSeasonItem(type));
+    background-image: url(${({ type }) => handleSeasonItem(type).item2});
     background-size: 100% 100%;
   }
   & .realMedium {
@@ -92,8 +88,7 @@ export const EffectContainer = styled.div<{ type: string }>`
     width: 20px;
     height: 20px;
     background-size: 100% 100%;
-    background-image: url(handleSeasonItem(type));
-    background-size: 100% 100%;
+    background-image: url(${({ type }) => handleSeasonItem(type).item3});
   }
   & .sharpMedium {
     width: 28px;
@@ -109,7 +104,7 @@ export const EffectContainer = styled.div<{ type: string }>`
     position: absolute;
     width: 15px;
     height: 15px;
-    background-image: url(handleSeasonItem(type));
+    background-image: url(${({ type }) => handleSeasonItem(type).item4});
     background-size: 100% 100%;
   }
   & .ringMedium {

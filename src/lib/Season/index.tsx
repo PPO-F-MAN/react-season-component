@@ -28,13 +28,13 @@ const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
 
     switch (type) {
       case "spring":
-        return <Spring />
+        return <Spring type="spring" />
       case "summer":
         return <Summer type="summer" />
       case "autumn":
-        return <Autumn />
+        return <Autumn type="autumn" />
       case "winter":
-        return <Winter />
+        return <Winter type="winter" />
     }
   }
 

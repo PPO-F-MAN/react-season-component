@@ -6,6 +6,7 @@ import {
   Colorizer3,
   Colorizer4,
 } from "./styled";
+import "./sunny.scss";
 
 const Sunny: FC = ({ children }) => {
   useEffect(() => {
@@ -17,7 +18,6 @@ const Sunny: FC = ({ children }) => {
   };
 
   const addSunshine = () => {
-    const wrapper: HTMLElement | null = document.querySelector("#wrapper");
     const canvas: HTMLCanvasElement | null = document.querySelector("canvas");
     let context: CanvasRenderingContext2D | null | undefined =
         canvas?.getContext("2d"),
@@ -63,7 +63,7 @@ const Sunny: FC = ({ children }) => {
     <>
       {children}
       <Sunshine></Sunshine>
-      <div id="wrapper">
+      <div>
         <Colorizer1 />
         <Colorizer2 />
         <Colorizer3 />

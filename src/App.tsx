@@ -5,9 +5,7 @@ import styled from "styled-components";
 function App() {
   return (
     <Container>
-      <Season>
-        <button>test</button>
-      </Season>
+      <Season type="summer">test</Season>
     </Container>
   );
 }

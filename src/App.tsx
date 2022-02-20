@@ -1,22 +1,13 @@
 import React from "react";
-import { Season } from "./lib";
+import { Time } from "./lib";
 import styled from "styled-components";
 
 function App() {
   return (
     <Container>
-      <Season type="spring">
+      <Time background>
         <div>봄</div>
-      </Season>
-      <Season type="summer">
-        <div>여름</div>
-      </Season>
-      <Season type="autumn">
-        <div>가을</div>
-      </Season>
-      <Season type="winter">
-        <div>겨울</div>
-      </Season>
+      </Time>
     </Container>
   );
 }
@@ -28,6 +19,6 @@ export default App;
 const Container = styled.div`
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   height: 200px;
 `;

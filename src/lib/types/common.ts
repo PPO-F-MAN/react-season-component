@@ -1,8 +1,8 @@
 interface CommonProps {
   typeChangeTerm?: TypeChangeTerm;
   animationRoundTime?: AnimationRoundTime;
-  imagePosition: ImagePosition;
-  animation: Animation;
+  imagePosition?: ImagePosition;
+  animation?: Animation;
 }
 
 export interface Season extends CommonProps {
@@ -11,10 +11,9 @@ export interface Season extends CommonProps {
 
 export interface Time extends CommonProps {
   type?: TimeType;
-  background: boolean;
 }
 
-export interface Weather extends CommonProps {
+export interface Weather extends Pick<CommonProps, "typeChangeTerm"> {
   type?: WeatherType;
 }
 

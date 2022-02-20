@@ -1,0 +1,61 @@
+$primary_colors: #82fd90 #f7fbb4 #ffe6e6 #82fd90;
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+@function create-palette() {
+  $palette: ();
+  @for $i from 1 through 150 {
+    $palette: append(
+      $palette,
+      mix(
+        nth($primary_colors, random(length($primary_colors))),
+        nth($primary_colors, random(length($primary_colors))),
+        60%
+      )
+    );
+  }
+  @return $palette;
+}
+$palette: create-palette();
+
+@each $color in $palette {
+  $size: random(100) + px;
+  .circle:nth-child(#{index($palette, $color)}) {
+    background: $color;
+    box-shadow: 0 0 random(10) + px random(10) + px $color;
+    top: random(100) + 0%;
+    left: random(100) + 0%;
+    width: $size;
+    height: $size;
+    opacity: random(100) / 100;
+    animation: float#{index($palette, $color)} 20s infinite linear;
+  }
+}
+
+@for $i from 1 through 150 {
+  $movex: random(100) - 20 + px;
+  $movey: random(400) - 300 + px;
+  $movex2: random(200) - 50 + px;
+  $movey2: random(400) - 100 + px;
+  @keyframes float#{$i} {
+    40% {
+      transform: translateX($movex) translateY($movey);
+    }
+    80% {
+      transform: translateX($movex2) translateY($movey2);
+    }
+  }
+}
+
+.colorizer1,
+.colorizer2,
+.colorizer3,
+.colorizer4 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  filter: blur(130px);
+}

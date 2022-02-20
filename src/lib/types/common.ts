@@ -1,30 +1,28 @@
 interface CommonProps {
-  typeChangeTerm?: TypeChangeTerm;
-  animationRoundTime?: AnimationRoundTime;
-  imagePosition?: ImagePosition;
-  animation?: Animation;
+  typeChangeTerm?: TypeChangeTerm
+  animationRoundTime?: AnimationRoundTime
+  imagePosition?: ImagePosition
+  animation?: Animation
 }
 
 export interface Season extends CommonProps {
-  type?: SeasonType;
-}
-
-export interface Time extends CommonProps {
-  type?: TimeType;
-  background: boolean;
+  type?: SeasonType
 }
 
 export interface Weather extends Pick<CommonProps, "typeChangeTerm"> {
-  type?: WeatherType;
+  type?: WeatherType
 }
 
-type SeasonType = "auto" | "spring" | "summer" | "autumn" | "winter";
-type TimeType = "auto" | "morning" | "day" | "evening" | "night";
-type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy";
+export interface Weather extends Pick<CommonProps, "typeChangeTerm"> {
+  type?: WeatherType
+}
 
-type TypeChangeTerm = number;
+type SeasonType = "auto" | "spring" | "summer" | "autumn" | "winter"
+type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy"
 
-type AnimationRoundTime = number;
+type TypeChangeTerm = number
+
+type AnimationRoundTime = number
 
 type ImagePosition =
   | "left-top"
@@ -35,11 +33,12 @@ type ImagePosition =
   | "right-bottom"
   | "center-top"
   | "center-center"
-  | "center-bottom";
+  | "center-bottom"
 
 // 감싸준 컴포넌트 기준 50%만 이동하도록 해주세요
 type Animation =
   | "left-to-right"
   | "right-to-left"
   | "top-to-bottom"
-  | "bottom-to-top";
+  | "bottom-to-top"
+  | "round"

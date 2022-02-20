@@ -23,7 +23,7 @@ export const SummerContainer = styled.div<{ type: string }>`
   & .wave:nth-of-type(2) {
     position: absolute;
     bottom: -70%;
-    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    animation: wave 7.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
       swell 7s ease -1.25s infinite;
     opacity: 1;
   }

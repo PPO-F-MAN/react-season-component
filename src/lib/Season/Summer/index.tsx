@@ -6,9 +6,9 @@ const Summer: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
   return (
     <SummerContainer type={type}>
       <div className="ocean">
-        <div className="wave"></div>
-        <div className="wave"></div>
-        <div>{children}</div>
+        <div className="wave" />
+        <div className="wave" />
+        {children}
       </div>
     </SummerContainer>
   );

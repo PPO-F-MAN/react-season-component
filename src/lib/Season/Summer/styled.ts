@@ -6,8 +6,8 @@ export const SummerContainer = styled.div<{ type: string }>`
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 30em;
   }
 
   & .wave {
@@ -22,9 +22,8 @@ export const SummerContainer = styled.div<{ type: string }>`
 
   & .wave:nth-of-type(2) {
     position: absolute;
-    bottom: -70%;
     animation: wave 7.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-      swell 7s ease -1.25s infinite;
+      7s ease -1.25s infinite;
     opacity: 1;
   }
 
@@ -40,7 +39,7 @@ export const SummerContainer = styled.div<{ type: string }>`
   @keyframes swell {
     0%,
     100% {
-      transform: translate3d(0, -25px, 0);
+      transform: translate3d(0, 25px, 0);
     }
     50% {
       transform: translate3d(0, 5px, 0);

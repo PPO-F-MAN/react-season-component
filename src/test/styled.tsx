@@ -9,8 +9,8 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 500px;
-  height: 360px;
+  width: 300px;
+  height: 300px;
 `;
 
 export const Title = styled.p`

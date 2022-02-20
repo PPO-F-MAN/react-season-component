@@ -6,54 +6,54 @@ function TimeTest() {
   return (
     <Styled.Container>
       <Styled.Title>Time</Styled.Title>
-      <Styled.Props>auto, background = true</Styled.Props>
+      <Styled.Props>left-top</Styled.Props>
       <Styled.Card>
-        <Time background={true} />
+        <Time background={true} imagePosition="left-top" animationRoundTime={10} animation="left-to-right" />
       </Styled.Card>
 
-      <Styled.Props>auto, background = false</Styled.Props>
+      <Styled.Props>left-top</Styled.Props>
       <Styled.Card>
-        <Time background={false} />
+        <Time background={true} animation="top-to-bottom" imagePosition="left-top" />
       </Styled.Card>
 
-      <Styled.Props>morning, background = true</Styled.Props>
+      <Styled.Props>left-center</Styled.Props>
       <Styled.Card>
-        <Time type="morning" background={true} animation="bottom-to-top" />
+        <Time background={true} imagePosition="left-center" />
       </Styled.Card>
 
-      <Styled.Props>morning, background = false</Styled.Props>
+      <Styled.Props>left-bottom</Styled.Props>
       <Styled.Card>
-        <Time type="morning" background={false} />
+        <Time background={true} imagePosition="left-bottom" />
       </Styled.Card>
 
-      <Styled.Props>day, background = true</Styled.Props>
+      <Styled.Props>center-top</Styled.Props>
       <Styled.Card>
-        <Time type="day" background={true} />
+        <Time background={true} imagePosition="center-top" />
       </Styled.Card>
 
-      <Styled.Props>day, background = false</Styled.Props>
+      <Styled.Props>center-center</Styled.Props>
       <Styled.Card>
-        <Time type="day" background={false} />
+        <Time background={true} imagePosition="center-center" />
       </Styled.Card>
 
-      <Styled.Props>evening, background = true</Styled.Props>
+      <Styled.Props>center-bottom</Styled.Props>
       <Styled.Card>
-        <Time type="evening" background={true} />
+        <Time background={true} imagePosition="center-bottom" />
       </Styled.Card>
 
-      <Styled.Props>evening, background = false</Styled.Props>
+      <Styled.Props>right-top</Styled.Props>
       <Styled.Card>
-        <Time type="evening" background={false} />
+        <Time background={true} imagePosition="right-top" />
       </Styled.Card>
 
-      <Styled.Props>night, background = true</Styled.Props>
+      <Styled.Props>right-center</Styled.Props>
       <Styled.Card>
-        <Time type="night" background={true} />
+        <Time background={true} imagePosition="right-center" />
       </Styled.Card>
 
-      <Styled.Props>night, background = false</Styled.Props>
+      <Styled.Props>right-bottom</Styled.Props>
       <Styled.Card>
-        <Time type="night" background={false} />
+        <Time background={true} animationRoundTime={10} animation="right-to-left" imagePosition="right-bottom" />
       </Styled.Card>
     </Styled.Container>
   );

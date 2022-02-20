@@ -140,4 +140,4 @@ Check out our [documentation website](#)
 
 ## License
 
-MIT. Copyright (c) 2022 Awesome Sprinters.
+MIT. Copyright (c) 2022 PPO F MAN.

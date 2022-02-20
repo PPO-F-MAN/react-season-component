@@ -11,19 +11,10 @@ const MORNING_IMAGE = "/images/morning_icon.png";
 const DAY_IMAGE = "/images/day_icon.png";
 const EVENING_NIGHT_IMAGE = "/images/night_icon.png";
 
-const Time: React.FC<TimeProps> = ({
-  children,
-  type = "auto",
-  animationRoundTime = 10000,
-  typeChangeTerm = 10000,
-  imagePosition = "left-top",
-  animation = "left-to-right",
-  background,
-}) => {
+const Time: React.FC<TimeProps> = ({ children, type = "auto", animationRoundTime = 10000, typeChangeTerm = 10000, imagePosition = "left-top", animation = "left-to-right", background }) => {
   const [currentType, setCurrentType] = useState<string>(type);
   const [currentImage, setCurrentImage] = useState<string>(MORNING_IMAGE);
-  const [currentBackground, setCurrentBackground] =
-    useState<string>(MORNING_GRADIENT);
+  const [currentBackground, setCurrentBackground] = useState<string>(MORNING_GRADIENT);
 
   const [x, y] = imagePosition.split("-");
 
@@ -66,18 +57,8 @@ const Time: React.FC<TimeProps> = ({
   }, [currentType]);
 
   return (
-    <Styled.Container
-      backgroundGradient={currentBackground}
-      background={background}
-    >
-      <Styled.Image
-        src={currentImage}
-        x={getX(x)}
-        y={getY(y)}
-        animation={animation}
-        duration={animationRoundTime}
-        iteration={typeChangeTerm}
-      />
+    <Styled.Container backgroundGradient={currentBackground} background={background}>
+      <Styled.Image src={currentImage} x={getX(x)} y={getY(y)} animation={animation} duration={animationRoundTime} iteration={typeChangeTerm} />
       <Styled.Children>{children}</Styled.Children>
     </Styled.Container>
   );

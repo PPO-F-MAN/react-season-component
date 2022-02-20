@@ -100,24 +100,16 @@ function getKeyframes(param: string) {
   }
 }
 
-const imgPositionStyle = ({
-  x,
-  y,
-  animation,
-  duration,
-  iteration,
-}: ImgPositionProps) => css`
+const imgPositionStyle = ({ x, y, animation, duration, iteration }: ImgPositionProps) => css`
   position: absolute;
   ${x};
   ${y};
-  animation: ${getKeyframes(animation)} ${duration}s infinite linear
-    ${iteration}s;
+  animation: ${getKeyframes(animation)} ${duration}s infinite linear ${iteration}s;
   width: 50%;
 `;
 
 export const Container = styled.div<ContainerProps>`
-  background: ${({ background, backgroundGradient }) =>
-    background ? backgroundGradient : "transparent"};
+  background: ${({ background, backgroundGradient }) => (background ? backgroundGradient : "transparent")};
   position: relative;
   left: 0;
   top: 0;

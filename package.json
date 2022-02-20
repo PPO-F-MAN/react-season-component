@@ -1,6 +1,6 @@
 {
   "name": "react-season-component",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "private": false,
   "module": "dist/index.js",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cp": "find ./src/lib/Weather -name '*.scss' -exec cp {} ./dist/Weather \\;",
-    "compile": "rm -rf dist && mkdir dist && tsc && npm run cp"
+    "compile": "rm -rf dist && mkdir dist && tsc"
   },
   "babel": {
     "presets": [

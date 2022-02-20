@@ -1,6 +1,6 @@
 {
   "name": "react-season-component",
-  "version": "0.2.30",
+  "version": "0.2.31",
   "private": false,
   "module": "dist/index.js",
   "main": "dist/index.js",

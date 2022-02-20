@@ -1,7 +1,10 @@
 import React, { FC } from "react";
 import { Sun, Cloud, Infinity } from "./styled";
-const sun = "/asset/weather/cloudy/sun.png";
-const cloud = "/asset/weather/cloudy/cloud.png";
+
+const END_POINT =
+  "https://github.com/PPO-F-MAN/react-season-component/blob/develop/public/asset/weather/cloudy";
+const sun = END_POINT + "/sun.png?raw=true";
+const cloud = END_POINT + "/cloud.png?raw=true";
 
 const Cloudy: FC = ({ children }) => {
   return (

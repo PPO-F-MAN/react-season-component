@@ -9,17 +9,11 @@ export interface Season extends CommonProps {
   type?: SeasonType;
 }
 
-export interface Time extends CommonProps {
-  type?: TimeType;
-  background: boolean;
-}
-
 export interface Weather extends Pick<CommonProps, "typeChangeTerm"> {
   type?: WeatherType;
 }
 
 type SeasonType = "auto" | "spring" | "summer" | "autumn" | "winter";
-type TimeType = "auto" | "morning" | "day" | "evening" | "night";
 type WeatherType = "auto" | "sunny" | "cloudy" | "rainy" | "snowy";
 
 type TypeChangeTerm = number;
@@ -42,4 +36,5 @@ type Animation =
   | "left-to-right"
   | "right-to-left"
   | "top-to-bottom"
-  | "bottom-to-top";
+  | "bottom-to-top"
+  | "round";

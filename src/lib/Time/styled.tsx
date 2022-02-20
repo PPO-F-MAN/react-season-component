@@ -5,7 +5,6 @@ interface ImgPositionProps {
   y: string;
   animation: string;
   duration: number;
-  iteration: number;
 }
 
 interface ContainerProps {
@@ -40,15 +39,12 @@ const rightToLeft = keyframes`
 const topToBottom = keyframes`
   0% {
     transform: translateY(0);
-    box-shadow: 0 0 100px 100px white;
   }
   50% {
     transform: translateY(-50%);
-    box-shadow: 0 0 100px 50px Rgba(255,244,25,0.3);
   }
   100% {
     transform: translateY(0);
-    box-shadow: 0 0 100px 100px white;
   }
 `;
 
@@ -67,23 +63,28 @@ const bottomToTop = keyframes`
 const round = keyframes`
 0% {
   opacity: 0;
-  transform: translate(0,0);
+  top : 0;
+  left: 0;
 }
 25% {
   opacity: 1;
-  transform: translate(100px, -100px);
+  top : -30%;
+  left: 10%;
 }
 50%{
   opacity: 1;
-  transform: translate(250px ,-250px);
+  top : -40%;
+  left: 30%;
 }
 75%{
   opacity: 1;
-  transform: translate(400px, -100px);
+  top : -35%;
+  left: 45%;
 }
 100% {
-  opacity: 0;
-  transform: translate(500px, 0);
+  opacity: 1;
+  top : -30%;
+  left: 50%;
 }
 `;
 
@@ -97,6 +98,8 @@ function getKeyframes(param: string) {
       return topToBottom;
     case "bottom-to-top":
       return bottomToTop;
+    default:
+      return round;
   }
 }
 
@@ -105,12 +108,11 @@ const imgPositionStyle = ({
   y,
   animation,
   duration,
-  iteration,
 }: ImgPositionProps) => css`
   position: absolute;
   ${x};
   ${y};
-  animation: ${getKeyframes(animation)} ${duration}s infinite ease ${iteration}s;
+  animation: ${duration}s ease infinite ${getKeyframes(animation)};
   width: 50%;
 `;
 

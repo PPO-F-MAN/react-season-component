@@ -1,6 +1,6 @@
 {
   "name": "react-season-component",
-  "version": "0.2.17",
+  "version": "0.2.28",
   "private": false,
   "module": "dist/index.js",
   "main": "dist/index.js",
@@ -10,8 +10,10 @@
     "url": "https://github.com/Awesome-Sprinters/react-season-component"
   },
   "dependencies": {
+    "gsap": "^3.9.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-gsap": "^3.2.1",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "typescript": "^4.5.5"
@@ -21,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish": "rm -rf dist && mkdir dist && tsc && npm publish"
+    "cp": "find ./src/lib/Weather -name '*.css' -exec cp {} ./dist/Weather \\;",
+    "compile": "rm -rf dist && mkdir dist && tsc && npm run cp"
   },
   "babel": {
     "presets": [

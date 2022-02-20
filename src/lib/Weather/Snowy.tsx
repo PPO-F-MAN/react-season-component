@@ -10,7 +10,7 @@ const Snowy: FC = ({ children }) => {
   let count = 0;
 
   const addSnow = () => {
-    const wrapper: HTMLElement | null = document.querySelector("#wrapper");
+    const wrapper: HTMLElement | null = document.querySelector("#snow-wrapper");
     const snow = document.createElement("span");
     snow.classList.add("snow");
     snow.style.left = `${Math.random() * (window.innerWidth - 1) + 1}px`;
@@ -26,7 +26,7 @@ const Snowy: FC = ({ children }) => {
     }
   };
 
-  return <Snow id="wrapper">{children}</Snow>;
+  return <Snow id="snow-wrapper">{children}</Snow>;
 };
 
 export default Snowy;

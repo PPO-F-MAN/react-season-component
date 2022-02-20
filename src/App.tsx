@@ -5,11 +5,11 @@ import styled from "styled-components";
 function App() {
   return (
     <Container>
-      {/* <Season>auto</Season> */}
-      {/* <Season type="spring">spring</Season> */}
+      <Season>auto</Season>
+      <Season type="spring">spring</Season>
       <Season type="summer">summer</Season>
-      {/* <Season type="autumn">autumn</Season>
-      <Season type="winter">winter</Season> */}
+      <Season type="autumn">autumn</Season>
+      <Season type="winter">winter</Season>
       <Time background>
         <div>봄</div>
       </Time>

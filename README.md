@@ -108,7 +108,7 @@ Check out our [documentation website](#)
     </td>
       
   <td align="center">
-      <a href="https://github.com/ID"
+      <a href="https://github.com/jiseung-kang"
         ><img
           src="https://avatars.githubusercontent.com/ID"
           width="100px;"

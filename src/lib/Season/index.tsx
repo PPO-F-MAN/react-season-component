@@ -42,7 +42,7 @@ const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
 
   useEffect(() => {
     type === "auto" && setSeasonType(getSeason());
-  }, []);
+  }, [type]);
 
   return (
     <SeasonContainer type={seasonType}>

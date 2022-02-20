@@ -2,7 +2,7 @@ import React from "react";
 import * as Styled from "./styled";
 import { Season as SeasonProps } from "../../types/common";
 
-const Summer: React.FC<SeasonProps> = ({ children, type = "auto", typeChangeTerm = 10000, imagePosition, animation }) => {
+const Summer: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
   return (
     <Styled.Container type={type}>
       <div className="ocean">

@@ -6,7 +6,7 @@ import {
   Colorizer3,
   Colorizer4,
 } from "./styled";
-// import "./sunny.scss";
+import "./sunny.css";
 
 const Sunny: FC = ({ children }) => {
   useEffect(() => {

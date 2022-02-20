@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import typeHandler from "./utils/typeHander"
-import { ASSET_SPRING, ASSET_AUTUMN, ASSET_WINTER } from "./constants"
+import styled from "styled-components";
+import { typeHandler } from "./utils/typeHandler";
+import { ASSET_SPRING, ASSET_AUTUMN, ASSET_WINTER } from "./constants";
 
 export const SeasonContainer = styled.div<{ type: string }>`
   background: ${({ type }) => typeHandler(type)};
@@ -10,18 +10,18 @@ export const SeasonContainer = styled.div<{ type: string }>`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
 const handleSeasonItem = (type: string) => {
   switch (type) {
     case "spring":
-      return ASSET_SPRING
+      return ASSET_SPRING;
     case "autumn":
-      return ASSET_AUTUMN
+      return ASSET_AUTUMN;
     default:
-      return ASSET_WINTER
+      return ASSET_WINTER;
   }
-}
+};
 
 export const EffectContainer = styled.div<{ type: string }>`
   position: absolute;
@@ -115,4 +115,4 @@ export const EffectContainer = styled.div<{ type: string }>`
     width: 35px;
     height: 35px;
   }
-`
+`;

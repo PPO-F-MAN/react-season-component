@@ -1,6 +1,6 @@
 import { SPRING, SUMMER, AUTUMN, WINTER } from "../constants";
 
-const typeHandler = (type: string) => {
+export const typeHandler = (type: string) => {
   switch (type) {
     case "spring":
       return SPRING;
@@ -14,5 +14,3 @@ const typeHandler = (type: string) => {
       return;
   }
 };
-
-export default typeHandler;

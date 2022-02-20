@@ -21,8 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist && tsc",
-    "prepare": "npm run publish:npm"
+    "publish": "rm -rf dist && mkdir dist && tsc && npm publish"
   },
   "babel": {
     "presets": [

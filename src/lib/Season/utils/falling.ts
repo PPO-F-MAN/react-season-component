@@ -24,7 +24,7 @@ export const falling = (container: HTMLDivElement | null) => {
     fallingItems(particleDiv);
   }
 
-  function fallingItems(element: any) {
+  function fallingItems(element: HTMLDivElement) {
     gsap.to(element, R(5, 12), {
       y: h + 100,
       ease: "none",

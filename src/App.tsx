@@ -28,6 +28,6 @@ export default App;
 const Container = styled.div`
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 200px;
 `;

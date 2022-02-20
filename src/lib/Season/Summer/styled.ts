@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ASSET_SUMMER } from "../constants";
 
 export const SummerContainer = styled.div<{ type: string }>`
   & .ocean {
@@ -10,7 +11,7 @@ export const SummerContainer = styled.div<{ type: string }>`
   }
 
   & .wave {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    background: url(${ASSET_SUMMER.wave}) repeat-x;
     position: absolute;
     bottom: 0;
     width: 3000%;
@@ -22,7 +23,8 @@ export const SummerContainer = styled.div<{ type: string }>`
   & .wave:nth-of-type(2) {
     position: absolute;
     bottom: -70%;
-    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+      swell 7s ease -1.25s infinite;
     opacity: 1;
   }
 

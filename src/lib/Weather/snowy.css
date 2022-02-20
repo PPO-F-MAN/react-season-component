@@ -1,0 +1,37 @@
+.snow {
+  position: absolute;
+  top: -10px;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  -webkit-animation: snowfall;
+  animation: snowfall;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes snowfall {
+  from {
+    top: -10px;
+  }
+  to {
+    top: 99%;
+    opacity: 0;
+  }
+}
+
+@keyframes snowfall {
+  from {
+    top: -10px;
+  }
+  to {
+    top: 99%;
+    opacity: 0;
+  }
+}

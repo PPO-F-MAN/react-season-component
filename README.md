@@ -108,18 +108,18 @@ Check out our [documentation website](#)
     </td>
       
   <td align="center">
-      <a href="https://github.com/ID"
+      <a href="https://github.com/jiseung-kang"
         ><img
-          src="https://avatars.githubusercontent.com/ID"
+          src="https://avatars.githubusercontent.com/jiseung-kang"
           width="100px;"
           alt=""
         /><br /><sub><b>춘식</b></sub></a
       ><br />
     </td>
   <td align="center">
-      <a href="https://github.com/ID"
+      <a href="https://github.com/i4song"
         ><img
-          src="https://avatars.githubusercontent.com/ID"
+          src="https://avatars.githubusercontent.com/i4song"
           width="100px;"
           alt=""
         /><br /><sub><b>아이뽀송</b></sub></a

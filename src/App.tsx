@@ -1,19 +1,22 @@
 import React from "react";
 import { Season } from "./lib";
 import styled from "styled-components";
-import { Weather } from "./lib";
-import Sunny from "./lib/Weather/Sunny";
-import Snowy from "./lib/Weather/Snowy";
-import Rainy from "./lib/Weather/Rainy";
-import Cloudy from "./lib/Weather/Cloudy";
 
 function App() {
   return (
     <Container>
-      <Season type="spring">test</Season>
-      {/* <Sunny />
-      <Snowy />
-      {/* <Rainy /> */}
+      <Season type="spring">
+        <div>봄</div>
+      </Season>
+      <Season type="summer">
+        <div>여름</div>
+      </Season>
+      <Season type="autumn">
+        <div>가을</div>
+      </Season>
+      <Season type="winter">
+        <div>겨울</div>
+      </Season>
     </Container>
   );
 }

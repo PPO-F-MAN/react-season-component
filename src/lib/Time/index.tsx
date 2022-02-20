@@ -17,11 +17,10 @@ const EVENING_NIGHT_IMAGE =
 const Time: React.FC<TimeProps> = ({
   children,
   type = "auto",
-  animationRoundTime = 10000,
-  typeChangeTerm = 10000,
+  animationRoundTime = 1,
   imagePosition = "left-top",
   animation = "left-to-right",
-  background,
+  background = true,
 }) => {
   const [currentType, setCurrentType] = useState<string>(type)
   const [currentImage, setCurrentImage] = useState<string>(MORNING_IMAGE)

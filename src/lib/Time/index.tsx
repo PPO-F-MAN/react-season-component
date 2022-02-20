@@ -7,14 +7,26 @@ const DAY_GRADIENT = "linear-gradient(270deg, #63B2F4 0%, #BDD4ED 100%)";
 const EVENING_GRADIENT = "linear-gradient(90deg, #042D60 0%, #456BD7 101.04%)";
 const NIGHT_GRADIENT = "linear-gradient(270deg, #787676 0%, #000000 100%)";
 
-const MORNING_IMAGE = "/images/morning_icon.png";
-const DAY_IMAGE = "/images/day_icon.png";
-const EVENING_NIGHT_IMAGE = "/images/night_icon.png";
+const MORNING_IMAGE =
+  "https://github.com/PPO-F-MAN/react-season-component/blob/develop/public/images/morning_icon.png?raw=true";
+const DAY_IMAGE =
+  "https://github.com/PPO-F-MAN/react-season-component/blob/develop/public/images/day_icon.png?raw=true";
+const EVENING_NIGHT_IMAGE =
+  "https://github.com/PPO-F-MAN/react-season-component/blob/develop/public/images/night_icon.png?raw=true";
 
-const Time: React.FC<TimeProps> = ({ children, type = "auto", animationRoundTime = 10000, typeChangeTerm = 10000, imagePosition = "left-top", animation = "left-to-right", background }) => {
+const Time: React.FC<TimeProps> = ({
+  children,
+  type = "auto",
+  animationRoundTime = 10000,
+  typeChangeTerm = 10000,
+  imagePosition = "left-top",
+  animation = "left-to-right",
+  background,
+}) => {
   const [currentType, setCurrentType] = useState<string>(type);
   const [currentImage, setCurrentImage] = useState<string>(MORNING_IMAGE);
-  const [currentBackground, setCurrentBackground] = useState<string>(MORNING_GRADIENT);
+  const [currentBackground, setCurrentBackground] =
+    useState<string>(MORNING_GRADIENT);
 
   const [x, y] = imagePosition.split("-");
 
@@ -57,8 +69,19 @@ const Time: React.FC<TimeProps> = ({ children, type = "auto", animationRoundTime
   }, [currentType]);
 
   return (
-    <Styled.Container backgroundGradient={currentBackground} background={background}>
-      <Styled.Image src={currentImage} x={getX(x)} y={getY(y)} animation={animation} duration={animationRoundTime} iteration={typeChangeTerm} />
+    <Styled.Container
+      backgroundGradient={currentBackground}
+      background={background}
+    >
+      <Styled.Image
+        src={currentImage}
+        draggable={false}
+        x={getX(x)}
+        y={getY(y)}
+        animation={animation}
+        duration={animationRoundTime}
+        iteration={typeChangeTerm}
+      />
       <Styled.Children>{children}</Styled.Children>
     </Styled.Container>
   );

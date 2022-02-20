@@ -46,7 +46,7 @@ const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
 
   return (
     <SeasonContainer type={seasonType}>
-      {handleSeasonType(seasonType)}
+      {handleSeasonType(type)}
       <div>{children}</div>
     </SeasonContainer>
   );

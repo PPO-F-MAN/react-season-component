@@ -1,2 +1,2 @@
-export * from "./common";
-export * from "./weather";
+export * from "./common"
+export * from "./weather"

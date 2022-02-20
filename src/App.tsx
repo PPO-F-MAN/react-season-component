@@ -1,17 +1,35 @@
 import React from "react";
-import { Season } from "./lib";
 import styled from "styled-components";
+import WeatherTest from "./test/WeatherTest";
+import SeasonTest from "./test/SeasonTest";
+import TimeTest from "./test/TimeTest";
 
 function App() {
   return (
     <Container>
-      <Season type="summer">test</Season>
+      {/* <WeatherTest />
+      <SeasonTest /> */}
+      <TimeTest />
     </Container>
   );
 }
 
 export default App;
 
-// 사용자 중심에서 생각하기
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  font-family: YUniverse-B;
 
-const Container = styled.nav``;
+  @font-face {
+    font-family: "YUniverse-B";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_yuniverse@1.0/YUniverse-B.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+`;

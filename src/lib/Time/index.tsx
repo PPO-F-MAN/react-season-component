@@ -14,8 +14,8 @@ const EVENING_NIGHT_IMAGE = "/images/night_icon.png";
 const Time: React.FC<TimeProps> = ({
   children,
   type = "auto",
-  animationRoundTime = 10000,
-  typeChangeTerm = 10000,
+  animationRoundTime = 10,
+  typeChangeTerm = 10,
   imagePosition = "left-top",
   animation = "left-to-right",
   background,

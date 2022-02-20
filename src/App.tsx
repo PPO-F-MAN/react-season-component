@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { Season } from "./lib";
 import styled from "styled-components";
 import { Weather } from "./lib";

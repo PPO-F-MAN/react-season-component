@@ -112,7 +112,7 @@ const imgPositionStyle = ({
   position: absolute;
   ${x};
   ${y};
-  animation: ${duration}s ease infinite ${getKeyframes(animation)};
+  animation: ${duration}s ${animation === 'round' ? 'linear' : 'ease'} infinite ${getKeyframes(animation)};
   width: 50%;
 `;
 

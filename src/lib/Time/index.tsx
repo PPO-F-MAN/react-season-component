@@ -14,6 +14,8 @@ const DAY_IMAGE =
 const EVENING_NIGHT_IMAGE =
   "https://github.com/PPO-F-MAN/react-season-component/blob/develop/public/images/night_icon.png?raw=true";
 
+const ONE_MINUTE = 60000;
+
 const Time: React.FC<TimeProps> = ({
   children,
   type = "auto",
@@ -22,7 +24,7 @@ const Time: React.FC<TimeProps> = ({
   animation = "left-to-right",
   background = true,
 }) => {
-  const [currentType, setCurrentType] = useState<string>(type);
+  const [currentTime, setCurrentTime] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(MORNING_IMAGE);
   const [currentBackground, setCurrentBackground] =
     useState<string>(MORNING_GRADIENT);
@@ -30,24 +32,35 @@ const Time: React.FC<TimeProps> = ({
   const [x, y] = imagePosition.split("-");
 
   useEffect(() => {
-    const date = new Date().getHours();
-    if (type === "auto") {
-      if (date <= 6) {
-        setCurrentType("night");
-      } else if (date <= 12) {
-        setCurrentType("morning");
-      } else if (date <= 18) {
-        setCurrentType("day");
-      } else if (date < 20) {
-        setCurrentType("evening");
-      } else {
-        setCurrentType("night");
-      }
-    }
-  }, [type]);
+    setInterval(() => {
+      const hour = new Date().getHours();
+      setCurrentTime(hour);
+    }, ONE_MINUTE);
+  }, []);
 
   useEffect(() => {
-    switch (currentType) {
+    if (type === "auto") {
+      if (currentTime <= 6) {
+        setCurrentImage(EVENING_NIGHT_IMAGE);
+        setCurrentBackground(NIGHT_GRADIENT);
+      } else if (currentTime <= 12) {
+        setCurrentImage(MORNING_IMAGE);
+        setCurrentBackground(MORNING_GRADIENT);
+      } else if (currentTime <= 18) {
+        setCurrentImage(DAY_IMAGE);
+        setCurrentBackground(DAY_GRADIENT);
+      } else if (currentTime < 20) {
+        setCurrentImage(EVENING_NIGHT_IMAGE);
+        setCurrentBackground(EVENING_GRADIENT);
+      } else {
+        setCurrentImage(EVENING_NIGHT_IMAGE);
+        setCurrentBackground(NIGHT_GRADIENT);
+      }
+    }
+  }, [currentTime, type]);
+
+  useEffect(() => {
+    switch (type) {
       case "morning":
         setCurrentImage(MORNING_IMAGE);
         setCurrentBackground(MORNING_GRADIENT);
@@ -65,7 +78,7 @@ const Time: React.FC<TimeProps> = ({
         setCurrentBackground(NIGHT_GRADIENT);
         break;
     }
-  }, [currentType]);
+  }, [type]);
 
   return (
     <Styled.Container
@@ -90,11 +103,11 @@ export default Time;
 function getX(x: string) {
   switch (x) {
     case "left":
-      return "left : 0;";
+      return "left : -10%;";
     case "right":
-      return "right : 0;";
+      return "right : -10%;";
     case "center":
-      return "left : 25%; transform : translateX(-50%);";
+      return "left : 17%; transform : translateX(-50%);";
   }
   return "";
 }
@@ -102,11 +115,11 @@ function getX(x: string) {
 function getY(y: string) {
   switch (y) {
     case "top":
-      return "top : 0;";
+      return "top : -10%;";
     case "bottom":
-      return "bottom : 0;";
+      return "bottom : -10%;";
     case "center":
-      return "top : 25%; transform : translateY(-50%);";
+      return "top : 17%; transform : translateY(-50%);";
   }
   return "";
 }

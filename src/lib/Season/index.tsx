@@ -1,15 +1,12 @@
 import React from "react"
-import { Season as SeasonProps } from "../types/common"
 import Summer from "./Summer"
+import Winter from "./Winter"
+import Spring from "./Spring"
+import Autumn from "./Autumn"
+import { Season as SeasonProps } from "../types/common"
 import { SeasonContainer } from "./styled"
 
-const Season: React.FC<SeasonProps> = ({
-  children,
-  type = "auto",
-  typeChangeTerm = 10000,
-  imagePosition,
-  animation,
-}) => {
+const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
   const getSeason = () => {
     let mon = new Date().getMonth() + 1
 
@@ -28,20 +25,25 @@ const Season: React.FC<SeasonProps> = ({
     if (type === "auto") {
       type = getSeason()
     }
-    console.log(type)
+
     switch (type) {
       case "spring":
-        return <Summer type="summer" />
+        return <Spring />
       case "summer":
         return <Summer type="summer" />
       case "autumn":
-        return <Summer type="summer" />
+        return <Autumn />
       case "winter":
-        return <Summer type="summer" />
+        return <Winter />
     }
   }
 
-  return <SeasonContainer type={type}>{handleSeasonType(type)}</SeasonContainer>
+  return (
+    <SeasonContainer type={type}>
+      {handleSeasonType(type)}
+      <div>{children}</div>
+    </SeasonContainer>
+  )
 }
 
 export default Season

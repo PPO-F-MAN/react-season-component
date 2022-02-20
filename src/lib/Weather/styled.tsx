@@ -10,6 +10,7 @@ export const Container = styled.div<{
   width: 100%;
   height: 100%;
   z-index: 0;
+  overflow: hidden;
 `;
 
 const drop = (height: string) => keyframes`

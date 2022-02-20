@@ -26,6 +26,8 @@ export default App;
 // 사용자 중심에서 생각하기
 
 const Container = styled.div`
-  width: 100%;
-  height: 200px;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
 `;

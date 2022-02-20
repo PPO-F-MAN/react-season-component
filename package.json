@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile": "rm -rf dist && mkdir dist && tsc"
+    "cp": "find ./src/lib/Weather -name '*.scss' -exec cp {} ./dist/Weather \\;",
+    "compile": "rm -rf dist && mkdir dist && tsc && npm run cp"
   },
   "babel": {
     "presets": [

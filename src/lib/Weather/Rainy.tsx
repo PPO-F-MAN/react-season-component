@@ -10,7 +10,7 @@ interface RainyProps {
 const Rainy: FC<RainyProps> = ({ children, parentHeight }) => {
   return (
     <>
-      {Array.from({ length: 250 }).map((_, index) => {
+      {Array.from({ length: 40 }).map((_, index) => {
         return (
           <Rain
             preserveAspectRatio="xMinYMin"

@@ -13,12 +13,16 @@ const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
     let mon = new Date().getMonth() + 1;
 
     if (3 <= mon && mon <= 5) {
+      setSeasonType("spring");
       return "spring";
     } else if (6 <= mon && mon <= 8) {
+      setSeasonType("summer");
       return "summer";
     } else if (9 <= mon && mon <= 11) {
+      setSeasonType("autumn");
       return "autumn";
     } else {
+      setSeasonType("winter");
       return "winter";
     }
   };
@@ -41,12 +45,12 @@ const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
   };
 
   useEffect(() => {
-    type === "auto" && setSeasonType(getSeason());
-  }, []);
+    seasonType === "auto" && setSeasonType(getSeason());
+  }, [seasonType, type]);
 
   return (
     <SeasonContainer type={seasonType}>
-      {handleSeasonType(seasonType)}
+      {handleSeasonType(type)}
       <div>{children}</div>
     </SeasonContainer>
   );

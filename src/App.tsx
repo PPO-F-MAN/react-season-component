@@ -7,7 +7,7 @@ function App() {
     <Container>
       {/* <Season>auto</Season> */}
       {/* <Season type="spring">spring</Season> */}
-      <Season type="summer">summer</Season>
+      <Season type="autumn">summer</Season>
       {/* <Season type="autumn">autumn</Season>
       <Season type="winter">winter</Season> */}
       <Time background>

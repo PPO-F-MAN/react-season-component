@@ -18,9 +18,9 @@ type ImagePosition =
   | "center-bottom"
 
 export interface Time {
-  type: TimeType
-  animation: Animation
-  imagePosition: ImagePosition
-  animationRoundTime: number
-  background: boolean
+  type?: TimeType
+  animation?: Animation
+  imagePosition?: ImagePosition
+  animationRoundTime?: number
+  background?: boolean
 }

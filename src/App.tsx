@@ -5,7 +5,13 @@ import styled from "styled-components"
 function App() {
   return (
     <Container>
-      <Time background>
+      <Time
+        background
+        type={"auto"}
+        animation={"left-to-right"}
+        imagePosition={"left-top"}
+        animationRoundTime={0}
+      >
         <div>봄</div>
       </Time>
     </Container>

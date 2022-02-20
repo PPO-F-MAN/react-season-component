@@ -1,3 +1,4 @@
+
 export const SPRING = "linear-gradient(180deg, #FAB5C3 0%, #FFF1E4 47.4%, #FFFFFF 100%)";
 
 export const SUMMER = "radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%)";
@@ -10,7 +11,7 @@ export const ASSET_ENDPOINT = "https://github.com/PPO-F-MAN/react-season-compone
 
 export const ASSET_SUMMER = {
   wave: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg",
-};
+}
 
 export const ASSET_SPRING = {
   item1: `${ASSET_ENDPOINT}/spring/cherry_blossom_1.png?raw=true`,

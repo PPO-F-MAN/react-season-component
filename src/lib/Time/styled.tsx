@@ -1,16 +1,15 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components"
 
 interface ImgPositionProps {
-  x: string;
-  y: string;
-  animation: string;
-  duration: number;
-  iteration: number;
+  x: string
+  y: string
+  animation: string
+  duration: number
 }
 
 interface ContainerProps {
-  background: boolean;
-  backgroundGradient: string;
+  background: boolean
+  backgroundGradient: string
 }
 
 const leftToRight = keyframes`
@@ -23,7 +22,7 @@ const leftToRight = keyframes`
   100% {
     transform: translateX(0);
   }
-`;
+`
 
 const rightToLeft = keyframes`
   0% {
@@ -35,7 +34,7 @@ const rightToLeft = keyframes`
   100% {
     transform: translateX(0);
   }
-`;
+`
 
 const topToBottom = keyframes`
   0% {
@@ -50,7 +49,7 @@ const topToBottom = keyframes`
     transform: translateY(0);
     box-shadow: 0 0 100px 100px white;
   }
-`;
+`
 
 const bottomToTop = keyframes`
   0% {
@@ -62,66 +61,79 @@ const bottomToTop = keyframes`
   100% {
     transform: translateY(0);
   }
-`;
+`
 
 const round = keyframes`
 0% {
   opacity: 0;
-  transform: translate(0,0);
+  top : 0;
+  left: 0;
 }
 25% {
   opacity: 1;
-  transform: translate(100px, -100px);
+  top : -30%;
+  left: 10%;
 }
 50%{
   opacity: 1;
-  transform: translate(250px ,-250px);
+  top : -40%;
+  left: 30%;
 }
 75%{
   opacity: 1;
-  transform: translate(400px, -100px);
+  top : -35%;
+  left: 45%;
 }
 100% {
-  opacity: 0;
-  transform: translate(500px, 0);
+  opacity: 1;
+  top : -30%;
+  left: 50%;
 }
-`;
+`
 
 function getKeyframes(param: string) {
   switch (param) {
     case "left-to-right":
-      return leftToRight;
+      return leftToRight
     case "right-to-left":
-      return rightToLeft;
+      return rightToLeft
     case "top-to-bottom":
-      return topToBottom;
+      return topToBottom
     case "bottom-to-top":
-      return bottomToTop;
+      return bottomToTop
+    default:
+      return round
   }
 }
 
-const imgPositionStyle = ({ x, y, animation, duration, iteration }: ImgPositionProps) => css`
+const imgPositionStyle = ({
+  x,
+  y,
+  animation,
+  duration,
+}: ImgPositionProps) => css`
   position: absolute;
   ${x};
   ${y};
-  animation: ${getKeyframes(animation)} ${duration}s infinite linear ${iteration}s;
+  animation: ${duration}s ease infinite ${getKeyframes(animation)};
   width: 50%;
-`;
+`
 
 export const Container = styled.div<ContainerProps>`
-  background: ${({ background, backgroundGradient }) => (background ? backgroundGradient : "transparent")};
+  background: ${({ background, backgroundGradient }) =>
+    background ? backgroundGradient : "transparent"};
   position: relative;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 10;
-`;
+`
 
 export const Image = styled.img`
   ${imgPositionStyle};
-`;
+`
 
 export const Children = styled.div`
   z-index: 100;
-`;
+`

@@ -1,49 +1,49 @@
-import React from "react";
-import Summer from "./Summer";
-import Winter from "./Winter";
-import Spring from "./Spring";
-import Autumn from "./Autumn";
-import { Season as SeasonProps } from "../types/common";
-import { SeasonContainer } from "./styled";
+import React from "react"
+import Summer from "./Summer"
+import Winter from "./Winter"
+import Spring from "./Spring"
+import Autumn from "./Autumn"
+import { Season as SeasonProps } from "../types/common"
+import { SeasonContainer } from "./styled"
 
 const Season: React.FC<SeasonProps> = ({ children, type = "auto" }) => {
   const getSeason = () => {
-    let mon = new Date().getMonth() + 1;
+    let mon = new Date().getMonth() + 1
 
     if (3 <= mon && mon <= 5) {
-      return "spring";
+      return "spring"
     } else if (6 <= mon && mon <= 8) {
-      return "summer";
+      return "summer"
     } else if (9 <= mon && mon <= 11) {
-      return "autumn";
+      return "autumn"
     } else {
-      return "winter";
+      return "winter"
     }
-  };
+  }
 
   const handleSeasonType = (type: string) => {
     if (type === "auto") {
-      type = getSeason();
+      type = getSeason()
     }
 
     switch (type) {
       case "spring":
-        return <Spring type="spring" />;
+        return <Spring type="spring" />
       case "summer":
-        return <Summer type="summer" />;
+        return <Summer type="summer" />
       case "autumn":
-        return <Autumn type="autumn" />;
+        return <Autumn type="autumn" />
       case "winter":
-        return <Winter type="winter" />;
+        return <Winter type="winter" />
     }
-  };
+  }
 
   return (
     <SeasonContainer type={type}>
       {handleSeasonType(type)}
       <div>{children}</div>
     </SeasonContainer>
-  );
-};
+  )
+}
 
-export default Season;
+export default Season

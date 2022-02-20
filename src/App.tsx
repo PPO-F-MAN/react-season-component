@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"
 import { Season } from "./lib"
 import styled from "styled-components"
@@ -6,6 +7,16 @@ import Sunny from "./lib/Weather/Sunny"
 import Snowy from "./lib/Weather/Snowy"
 import Rainy from "./lib/Weather/Rainy"
 import Cloudy from "./lib/Weather/Cloudy"
+=======
+import React from "react";
+import { Season } from "./lib";
+import styled from "styled-components";
+import { Weather } from "./lib";
+import Sunny from "./lib/Weather/Sunny";
+import Snowy from "./lib/Weather/Snowy";
+import Rainy from "./lib/Weather/Rainy";
+import Cloudy from "./lib/Weather/Cloudy";
+>>>>>>> 863e799 (fix: conflict 해결)
 
 function App() {
   return (
@@ -27,4 +38,4 @@ const Container = styled.div`
   left: 0;
   width: 100px;
   height: 100px;
-`
+`;

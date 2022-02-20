@@ -1,15 +1,15 @@
-import styled, { css, keyframes } from "styled-components"
+import styled, { css, keyframes } from "styled-components";
 
 interface ImgPositionProps {
-  x: string
-  y: string
-  animation: string
-  duration: number
+  x: string;
+  y: string;
+  animation: string;
+  duration: number;
 }
 
 interface ContainerProps {
-  background: boolean
-  backgroundGradient: string
+  background: boolean;
+  backgroundGradient: string;
 }
 
 const leftToRight = keyframes`
@@ -22,7 +22,7 @@ const leftToRight = keyframes`
   100% {
     transform: translateX(0);
   }
-`
+`;
 
 const rightToLeft = keyframes`
   0% {
@@ -34,22 +34,19 @@ const rightToLeft = keyframes`
   100% {
     transform: translateX(0);
   }
-`
+`;
 
 const topToBottom = keyframes`
   0% {
     transform: translateY(0);
-    box-shadow: 0 0 100px 100px white;
   }
   50% {
     transform: translateY(-50%);
-    box-shadow: 0 0 100px 50px Rgba(255,244,25,0.3);
   }
   100% {
     transform: translateY(0);
-    box-shadow: 0 0 100px 100px white;
   }
-`
+`;
 
 const bottomToTop = keyframes`
   0% {
@@ -61,7 +58,7 @@ const bottomToTop = keyframes`
   100% {
     transform: translateY(0);
   }
-`
+`;
 
 const round = keyframes`
 0% {
@@ -89,20 +86,20 @@ const round = keyframes`
   top : -30%;
   left: 50%;
 }
-`
+`;
 
 function getKeyframes(param: string) {
   switch (param) {
     case "left-to-right":
-      return leftToRight
+      return leftToRight;
     case "right-to-left":
-      return rightToLeft
+      return rightToLeft;
     case "top-to-bottom":
-      return topToBottom
+      return topToBottom;
     case "bottom-to-top":
-      return bottomToTop
+      return bottomToTop;
     default:
-      return round
+      return round;
   }
 }
 
@@ -117,7 +114,7 @@ const imgPositionStyle = ({
   ${y};
   animation: ${duration}s ease infinite ${getKeyframes(animation)};
   width: 50%;
-`
+`;
 
 export const Container = styled.div<ContainerProps>`
   background: ${({ background, backgroundGradient }) =>
@@ -128,12 +125,12 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   height: 100%;
   z-index: 10;
-`
+`;
 
 export const Image = styled.img`
   ${imgPositionStyle};
-`
+`;
 
 export const Children = styled.div`
   z-index: 100;
-`
+`;

@@ -6,7 +6,6 @@ import Snowy from "./Snowy"
 import Sunny from "./Sunny"
 import Cloudy from "./Cloudy"
 import { getAutoType } from "../utils"
-
 import type { Weather as WeatherProps, WeatherType } from "../types"
 
 const cloudyGradient =

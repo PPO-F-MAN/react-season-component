@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from "react";
 import { Snow } from "./styled";
-// import "./snowy.scss";
+import "./snowy.css";
 
 const Snowy: FC = ({ children }) => {
   useEffect(() => {

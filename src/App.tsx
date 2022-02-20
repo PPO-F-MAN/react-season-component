@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import { Season } from "./lib";
 import styled from "styled-components";
 import { Weather } from "./lib";
@@ -24,8 +23,8 @@ export default App;
 // 사용자 중심에서 생각하기
 
 const Container = styled.div`
-top: 0;
-left: 0;
-width: 100px;
-height: 100px;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
 `;

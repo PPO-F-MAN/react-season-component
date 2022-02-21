@@ -6,10 +6,10 @@
     </a>
 </div>
 
-## Introduction
+# Introduction
 날씨, 계절, 시간에 따른 아름다운 효과를 주고싶을 때 사용할 수 있습니다.
 
-## Get Started
+# Get Started
 ```
 npm i react-season-component
 ```
@@ -18,24 +18,28 @@ or
 yarn add react-season-component
 ```
 
-## Quick Start
+# Quick Start
 ```typescript
 import { Season, Weather, Time } from "react-season-component"
 ```
 
-## Document
+# Document
 Check out our [documentation website](https://ppo-f-man.github.io/react-season-component-web/)
 
-## Components Usage
+# Components Usage
 
-### Season
+## Season
+
+![Feb-21-2022 15-46-51](https://user-images.githubusercontent.com/54893898/154903456-854fdd47-a9f3-4c98-ab56-d403aedc3137.gif)
 
 |props | value | meaning |
 |------|-------|---------|
 |**type** | `auto(default)`, `spring`, `summer`, `autumn`, `winter`| value에 따른 계절 효과 제공 |
 |**isAnimated** | `true(default)`, `false` | 애니메이션 실행 여부 |
 
-### Time
+## Time
+
+![Feb-21-2022 15-46-17](https://user-images.githubusercontent.com/54893898/154903351-d1d4bd7c-ff9b-430c-b999-fc4e62d5c199.gif)
 
 |props | value | meaning |
 |------|-------|---------|
@@ -46,7 +50,9 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
 |**background** | boolean | false시 기본 배경이 사라집니다.  |
 
 
-### Weather
+## Weather
+
+![Feb-21-2022 15-48-48](https://user-images.githubusercontent.com/54893898/154903389-51c53474-1dd3-43b8-931d-de21e60445e9.gif)
 
 |props | value | meaning |
 |------|-------|---------|
@@ -56,7 +62,7 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
 
 
 
-## Contributors
+# Contributors
 <table>
   <tr>
     <td align="center">
@@ -138,6 +144,6 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
 </table>
 
 
-## License
+# License
 
 MIT. Copyright (c) 2022 PPO F MAN.

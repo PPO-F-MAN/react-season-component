@@ -32,6 +32,7 @@ const Time: React.FC<TimeProps> = ({
   const [x, y] = imagePosition.split("-");
 
   useEffect(() => {
+    setCurrentTime(new Date().getHours());
     setInterval(() => {
       const hour = new Date().getHours();
       setCurrentTime(hour);

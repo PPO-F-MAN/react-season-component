@@ -10,9 +10,7 @@ function App() {
       <Season type="summer">summer</Season>
       <Season type="autumn">autumn</Season>
       <Season type="winter">winter</Season>
-      <Time background>
-        <div>봄</div>
-      </Time>
+      <Time background type="auto" />
     </Container>
   );
 }

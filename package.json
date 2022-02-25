@@ -1,10 +1,17 @@
 {
   "name": "react-season-component",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": false,
   "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "description": "React awesome background component",
+  "keywords": [
+    "react",
+    "component",
+    "background",
+    "animation"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Awesome-Sprinters/react-season-component"

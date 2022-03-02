@@ -1,6 +1,6 @@
 {
   "name": "react-season-component",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": false,
   "module": "dist/index.js",
   "main": "dist/index.js",
@@ -14,8 +14,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Awesome-Sprinters/react-season-component"
+    "url": "https://github.com/PPO-F-MAN/react-season-component"
   },
+  "homepage": "https://ppo-f-man.github.io/react-season-component-web/",
   "dependencies": {
     "gsap": "^3.9.1",
     "react": "^17.0.2",

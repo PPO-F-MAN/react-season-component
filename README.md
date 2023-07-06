@@ -89,7 +89,7 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
           src="https://avatars.githubusercontent.com/junghyeonsu"
           width="100px;"
           alt=""
-        /><br /><sub><b>junghyeonsu</b></sub></a
+        /><br /><sub><b>준</b></sub></a
       ><br />
       </td>
     <td align="center">
@@ -98,7 +98,7 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
           src="https://avatars.githubusercontent.com/deveeni"
           width="100px;"
           alt=""
-        /><br /><sub><b>deveeni</b></sub></a
+        /><br /><sub><b>데비니</b></sub></a
       ><br />
     </td>
     </tr>
@@ -109,7 +109,7 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
           src="https://avatars.githubusercontent.com/useonglee"
           width="100px;"
           alt=""
-        /><br /><sub><b>useonglee</b></sub></a
+        /><br /><sub><b>이안</b></sub></a
       ><br />
     </td>
       

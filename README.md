@@ -123,9 +123,9 @@ Check out our [documentation website](https://ppo-f-man.github.io/react-season-c
       ><br />
     </td>
   <td align="center">
-      <a href="https://github.com/i4song"
+      <a href="https://github.com/o-bard-o"
         ><img
-          src="https://avatars.githubusercontent.com/i4song"
+          src="https://avatars.githubusercontent.com/o-bard-o"
           width="100px;"
           alt=""
         /><br /><sub><b>아이뽀송</b></sub></a

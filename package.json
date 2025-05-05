@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node build.ts && eslint --fix ./dist/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cp": "find ./src/lib/Weather -name '*.css' -exec cp {} ./dist/Weather \\;",
@@ -63,6 +63,9 @@
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.23",
+    "esbuild": "^0.14.25",
+    "esbuild-plugin-sass": "^1.0.1",
+    "eslint": "^8.10.0",
     "sass": "^1.49.8"
   },
   "browser": {
